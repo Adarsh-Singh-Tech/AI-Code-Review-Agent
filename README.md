@@ -1,11 +1,11 @@
-# 🧠 AI Code Review Agent
+#  AI Code Review Agent
 
 An AI-powered code analysis tool built using CrewAI and OpenRouter.  
 This project simulates a senior software engineer reviewing code for quality, bugs, performance, and maintainability.
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 The AI Code Review Agent helps developers by:
 
@@ -17,17 +17,17 @@ The AI Code Review Agent helps developers by:
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🤖 Autonomous Code Review Agent
-- 🔍 Multi-dimensional code analysis
-- ⚡ Fast and cost-efficient (OpenRouter - GPT-4o-mini)
-- 🧩 Built using CrewAI agent architecture
-- 📄 Structured and detailed feedback output
+-  Autonomous Code Review Agent
+-  Multi-dimensional code analysis
+-  Fast and cost-efficient (OpenRouter - GPT-4o-mini)
+-  Built using CrewAI agent architecture
+-  Structured and detailed feedback output
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Python 3.11
 - CrewAI
@@ -37,36 +37,64 @@ The AI Code Review Agent helps developers by:
 ---
 
 ## 📂 Project Structure
-ai-code-review-agent/
-│
-├── app/                          # Core application logic
-│   ├── main.py                  # Entry point (runs the agent)
-│   │
-│   ├── agents/                  # All agent definitions
-│   │   └── code_reviewer.py     # Code reviewer agent
-│   │
-│   ├── tasks/                   # Task definitions
-│   │   └── review_task.py       # Code review task
-│
-├── inputs/                      # Sample inputs for testing
-│   └── sample_code.py           # Example code for review
-│
-├── outputs/                     # Generated outputs
-│   └── review_*.md              # Saved review reports
-│
-├── config/                      # Configuration files (optional future use)
-│   └── settings.py              # Model, params, etc.
-│
-├── .env                         # API keys (ignored in Git)
-├── .gitignore                   # Ignore rules
-├── requirements.txt             # Dependencies
-├── README.md                    # Project documentation
-└── mainbk.py                    # Backup (optional)-
+<img width="456" height="530" alt="image" src="https://github.com/user-attachments/assets/a768687e-b6f3-4290-897e-f0fa45ed59dd" />
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the repository
 
-```bash
+bash
 git clone https://github.com/YOUR_USERNAME/ai-code-review-agent.git
 cd ai-code-review-agentd
+
+### Create virtual environment
+python3.11 -m venv .venv
+source .venv/bin/activate
+
+### Install dependencies
+pip install crewai openai python-dotenv
+
+### Setup environment variables
+Create a .env file:
+OPENROUTER_API_KEY=your_api_key_here
+
+### Run the project
+python main.py
+
+### Example
+Input:
+def add(a,b):
+ return a+b
+
+### Output
+Code quality issues
+Suggested improvements
+Refactored version
+
+### Cost Efficiency
+Uses gpt-4o-mini
+Approx ₹0.1–₹0.5 per request
+
+### Future Enhancements
+Multi-agent pipeline (Reviewer + Fixer)
+GitHub PR integration
+Web UI (Streamlit / React)
+API deployment
+
+### Author
+Adarsh Singh Gautam
+Building AI-powered developer tools
+
+### TEP 11: Push
+bash
+git add .
+git commit -m "Initial commit - AI Code Review Agent"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/ai-code-review-agent.git
+git push -u origin main
+
+### Result
+Ab tere paas 2 strong projects honge:
+Content Writer Agent
+Code Review Agent
+
